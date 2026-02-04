@@ -226,4 +226,65 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+  /**
+   * Floating Facebook CTA in entrevista section
+   */
+  const fbSection = document.querySelector('#entrevista');
+  const fbFloating = document.getElementById('fb-floating');
+  const fbBtn = document.getElementById('fb-floating-btn');
+  const fbPanel = document.getElementById('fb-floating-panel');
+
+  if (fbSection && fbFloating) {
+    // Slide the floating icon across the viewport while the entrevista section is in view
+    const updateFloating = () => {
+      const rect = fbSection.getBoundingClientRect();
+      const vh = window.innerHeight;
+      const vw = window.innerWidth;
+      const sectionH = rect.height;
+
+      // progress goes 0..1 while user scrolls through the section
+      let progress = (vh - rect.top) / (sectionH + vh);
+      progress = Math.max(0, Math.min(1, progress));
+
+      if (progress > 0 && progress < 1) {
+        fbFloating.classList.add('visible');
+
+        // horizontal position: from just off-left to just off-right
+        const startX = -86; // start off-screen left (center of button)
+        const endX = vw + 86; // end off-screen right
+        const centerX = startX + progress * (endX - startX);
+        // set left so the button center is at centerX
+        fbFloating.style.left = (centerX - 43) + 'px';
+
+        // vertical: center of the visible section area (relative to viewport)
+        const top = rect.top + sectionH * 0.5;
+        // keep it inside viewport bounds
+        const clampedTop = Math.max(80, Math.min(vh - 80, top));
+        fbFloating.style.top = clampedTop + 'px';
+      } else {
+        fbFloating.classList.remove('visible');
+      }
+    };
+
+    window.addEventListener('scroll', updateFloating, { passive: true });
+    window.addEventListener('resize', updateFloating);
+    window.addEventListener('load', updateFloating);
+    // run once to set initial state
+    updateFloating();
+
+    // Toggle panel on button click (panel appears next to floating icon)
+    if (fbBtn && fbPanel) {
+      fbBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        fbPanel.classList.toggle('open');
+      });
+
+      // Close when clicking outside
+      document.addEventListener('click', function(ev) {
+        if (!fbFloating.contains(ev.target) && fbPanel.classList.contains('open')) {
+          fbPanel.classList.remove('open');
+        }
+      });
+    }
+  }
 })();
