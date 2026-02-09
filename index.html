@@ -178,7 +178,7 @@
 
     </section><!-- /Yo -->
 
-    <!-- Acerca de la sección -->
+<!-- Acerca de la sección -->
 <section id="about" class="about section">
 
   <div class="container section-title" data-aos="fade-up">
@@ -189,15 +189,16 @@
   
     <div class="row gy-4 justify-content-center">
       <div class="col-lg-4 d-flex align-items-stretch">
-  <img src="assets/img/Susan.png" class="img-fluid h-100 object-fit-cover rounded-4 shadow" alt="Susan Dolly Sanchez Espinal">
-</div>
+        <img src="assets/img/Susan.png" class="img-fluid h-100 object-fit-cover rounded-4 shadow" alt="Susan Dolly Sanchez Espinal">
+      </div>
 
       <div class="col-lg-8 content">
         <h2>Empresaria, Gestora Administrativa y Líder de Comunidad</h2>
         <p class="fst-italic py-3">
-          Soy Susan Dolly Sánchez Espinal, empresaria y apasionada por generar impacto positivo en la sociedad.
+          Susan Dolly Sánchez Espinal, empresaria y apasionada por generar impacto positivo en la sociedad.
         </p>
-          <div class="row">
+
+        <div class="row">
           <div class="col-lg-6">
             <ul>
               <li><i class="bi bi-chevron-right"></i> <strong>Afiliación:</strong> <span>Rpublic &amp; Graphics — Asociada a la Cámara de Comercio de Lima (CCL)</span></li>
@@ -212,20 +213,87 @@
             </ul>
           </div>
         </div>
-        <p class="py-3">
-          Actualmente soy Gerente General de <strong>Rpublic &amp; Graphics S.A.C.</strong>, una empresa especializada en impresión y publicidad. Además, soy fundadora y CEO de <strong>Sulu Girls</strong>, marca dedicada al diseño, marketing y publicidad de ropa deportiva femenina, y lidero <strong>VOIA Concept Store</strong>, un marketplace de productos exclusivos.
-        </p>
-        <p class="py-3">
-          Como Asistente Financiera y Administrativa del <strong>Colegio América San Miguel</strong>, gestiono procesos educativos y administrativos. También soy Directora Ejecutiva de <strong>Business Contact E.I.R.L.</strong>, una comunidad empresarial donde lidero proyectos de networking y convenios estratégicos.
-        </p>
-        <p class="py-3">
-          Mi experiencia abarca administración, marketing empresarial y diseño de moda. Me apasiona impulsar conexiones, promover el crecimiento profesional y generar impacto positivo a través de la creatividad y la colaboración.
-        </p>
+
+        <!-- TEXTO VISIBLE -->
+        <div id="aboutTextShort">
+          <p class="py-3">
+            Actualmente es Gerente General de <strong>Rpublic &amp; Graphics S.A.C.</strong>, empresa especializada en impresión y publicidad. Es también fundadora y CEO de <strong>Sulu Girls</strong>, marca enfocada en el diseño, marketing y comercialización de ropa deportiva femenina, y lidera <strong>VOIA Concept Store</strong>, marketplace de productos exclusivos.
+          </p>
+          <p class="py-3">
+            Se desempeña como Asistente Financiera y Administrativa del <strong>Colegio América San Miguel</strong>, gestionando procesos educativos y administrativos. Asimismo, es Directora Ejecutiva de <strong>Business Contact E.I.R.L.</strong>, comunidad empresarial donde impulsa networking, convenios estratégicos y espacios de crecimiento empresarial.
+          </p>
+          <p class="py-3">
+           Su experiencia abarca la administración, el marketing empresarial y el desarrollo de proyectos de marca. Destaca por impulsar conexiones, promover el crecimiento profesional y generar impacto positivo a través de la creatividad y la colaboración.
+          </p>
+        </div>
+
+        <!-- TEXTO EXPANDIBLE -->
+        <div id="aboutTextMore" class="about-more">
+          <p>Susan Dolly Sánchez Espinal es madre de una niña, esposa y emprendedora, con una sólida base familiar que ha sido el motor de su vocación de servicio y liderazgo...</p>
+
+          <p>Cuenta con más de dos décadas de compromiso con el desarrollo educativo, empresarial y social del país, fortaleciendo mujeres, emprendedores y MYPES.</p>
+
+          <p>Actualmente se desempeña como Directora Ejecutiva de Business Contact, consolidando alianzas estratégicas, eventos empresariales y redes de contacto.</p>
+
+          <p>Forma parte del Gremio COPE de la Cámara de Comercio de Lima y ha impulsado alianzas internacionales y estratégicas con instituciones de moda y turismo.</p>
+
+          <p>Ha sido mentora, ponente y panelista en espacios de alto impacto, incluyendo el Colegio de Ingenieros del Perú, recibiendo reconocimientos institucionales.</p>
+
+          <p>Cuenta con reconocimientos como Mujer Líder y distinciones del Congreso de la República y organizaciones empresariales.</p>
+
+          <p>También impulsa iniciativas educativas, emprendimientos familiares y proyectos de impacto social apoyando a mujeres emprendedoras e instituciones benéficas.</p>
+        </div>
+
+        <!-- BOTÓN -->
+        <button id="toggleAbout" class="about-toggle-btn">
+          Ver más
+        </button>
+
       </div>
     </div>
   
   </div>
-</section><!-- /Acerca de la sección -->
+</section>
+
+<style>
+.about-more{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height 0.5s ease;
+}
+
+.about-toggle-btn{
+  background:#2c3e50;
+  color:white;
+  border:none;
+  padding:10px 18px;
+  border-radius:25px;
+  font-weight:600;
+  cursor:pointer;
+  transition:all 0.3s ease;
+}
+
+.about-toggle-btn:hover{
+  background:#1a252f;
+  transform:translateY(-2px);
+}
+</style>
+
+<script>
+const btn = document.getElementById("toggleAbout");
+const more = document.getElementById("aboutTextMore");
+
+btn.onclick = () => {
+  if (more.style.maxHeight) {
+    more.style.maxHeight = null;
+    btn.textContent = "Ver más";
+  } else {
+    more.style.maxHeight = more.scrollHeight + "px";
+    btn.textContent = "Ver menos";
+  }
+};
+</script>
+
 
       
       
@@ -2012,7 +2080,7 @@ document.addEventListener('keydown', function(e) {
     <img src="assets/img/portfolio/branding-4.jpg" class="img-fluid" alt="">
     <div class="portfolio-info">
       <h4>Certificado</h4>
-      <p>Certificado de participación en taller de branding personal.</p>
+      <p>Participación en el evento: XVIII Cumbre Pyme del APEC, eres grande</p>
       <a href="assets/img/portfolio/branding-4.jpg" title="Certificado de branding personal" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
     </div>
   </div>
