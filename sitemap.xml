@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://susan-sancheze.info/</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://susan-sancheze.info/assets/img/Susan.png</image:loc>
+      <image:title>Susan Sanchez - Foto principal</image:title>
+      <image:caption>Perfil profesional de Susan Sanchez</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://susan-sancheze.info/assets/img/portfolio/gremio.jpeg</image:loc>
+      <image:title>Alianza Gremio PYMES CCL</image:title>
+      <image:caption>Convenio con el Gremio PYMES de la Camara de Comercio de Lima</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://susan-sancheze.info/assets/img/portfolio/cclchina.jpeg</image:loc>
+      <image:title>Visita Delegacion China</image:title>
+      <image:caption>Visita de delegacion de Shenzhen al Gremio PYMES CCL</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://susan-sancheze.info/assets/img/portfolio/congreso.jpeg</image:loc>
+      <image:title>Reconocimiento del Congreso</image:title>
+      <image:caption>Reconocimiento institucional a Susan Sanchez</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://susan-sancheze.info/assets/img/portfolio/veritas.jpeg</image:loc>
+      <image:title>Reconocimiento Veritas</image:title>
+      <image:caption>Participacion y reconocimiento en evento Veritas</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://susan-sancheze.info/portfolio-details.html</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://susan-sancheze.info/service-details.html</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://susan-sancheze.info/starter-page.html</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>

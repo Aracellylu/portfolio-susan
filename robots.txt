@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://susan-sancheze.info/sitemap.xml
